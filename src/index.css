@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Global scrollbar styling for Chromium browsers (Chrome, Edge, Safari) */
+/* Make the scrollbar a bit wider */
+::-webkit-scrollbar {
+    width: 8px; /* Increase from 8px to 12px */
+    margin: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1F2937; /* gray-800 */
+  }
+  
+  /* Add extra border to create a "gap" look */
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B5563; /* gray-700 */
+    border-radius: 4px;
+  
+    /* The thicker border color should match the track,
+       creating an illusion of space between the thumb & content */
+    border: 4px solid #1F2937;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-color: #4B5563 #1F2937;
+  }
+  
